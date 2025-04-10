@@ -2,32 +2,86 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Playfair+Display+SC:wght@700&family=Parisienne&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Playfair+Display+SC:wght@700&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet" />
 
-    <title>Ave, Maria</title>
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Avemariar</title>
 </head>
 
 <body>
     <main>
         <div class="principal">
-            <h1 class="titulo">Ave, Maria</h1>
+            <h1 class="titulo">Avemariar</h1>
             <div class="links">
                 <a href="rosario.html">Rosário</a>
             </div>
-            <div class="data">
-                <p>Terça-feira, 8 de abril de 2025</p>
-                <p>Misterios Dolorosos</p>
-            </div>
+
+            <section class="data">
+                <p id="data-completa"></p>
+                <a id="misterio-dia"></a>
+            </section>
+        </div>
+
+        <div class="logo">
+            <img src="./imgs/icone.png" alt="Logo do site Avemariar" />
+        </div>
+
+        <div class="contatos">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </main>
+
+    <script>
+        const hoje = new Date();
+
+        const diasSemana = [
+            'Domingo', 'Segunda-feira', 'Terça-feira',
+            'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+        ];
+
+        const misteriosPorDia = {
+            'Domingo': { nome: 'Mistérios Gloriosos', link: 'gloriosos.html' },
+            'Segunda-feira': { nome: 'Mistérios Gozosos', link: 'gozosos.html' },
+            'Terça-feira': { nome: 'Mistérios Dolorosos', link: 'dolorosos.html' },
+            'Quarta-feira': { nome: 'Mistérios Gloriosos', link: 'gloriosos.html' },
+            'Quinta-feira': { nome: 'Mistérios Luminosos', link: 'luminosos.html' },
+            'Sexta-feira': { nome: 'Mistérios Dolorosos', link: 'dolorosos.html' },
+            'Sábado': { nome: 'Mistérios Gozosos', link: 'gozosos.html' }
+        };
+
+        const dia = hoje.getDay();
+        const nomeDia = diasSemana[dia];
+        const misterio = misteriosPorDia[nomeDia];
+
+        const dataFormatada = hoje.toLocaleDateString('pt-BR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
+        document.getElementById('data-completa').textContent = `${nomeDia}, ${dataFormatada}.`;
+        const linkMisterio = document.getElementById('misterio-dia');
+        linkMisterio.textContent = misterio.nome;
+        linkMisterio.href = misterio.link;
+    </script>
 </body>
 
 </html>

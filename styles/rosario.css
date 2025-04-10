@@ -1,0 +1,31 @@
+.logo {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.contatos {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.contatos ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.contatos ul li a {
+    color: #EBD8A4;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.contatos ul li a:hover {
+    color: #D4AF37;
+}
