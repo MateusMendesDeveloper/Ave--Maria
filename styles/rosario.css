@@ -1,31 +1,36 @@
-.logo {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-}
-
-.logo img {
-    width: 60px;
-}
-
-.contatos {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-.contatos ul {
-    list-style: none;
+main {
+    height: 100vh;
+    width: 100%;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.contatos ul li a {
+.ativado {
+    display: block;
+}
+
+.desativado {
+    display: none;
+}
+
+.sinaldacruz {
+    text-align: center;
+}
+
+.home {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+.home a {
+    text-decoration: none;
     color: #EBD8A4;
-    font-size: 2rem;
-    transition: 0.5s;
 }
 
-.contatos ul li a:hover {
+.home a:hover {
     color: #D4AF37;
 }
