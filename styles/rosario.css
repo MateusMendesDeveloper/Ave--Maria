@@ -6,17 +6,67 @@ main {
     justify-content: center;
 }
 
-.ativado {
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    gap: 1.5rem;
+}
+
+.slide-container {
+    flex: 1;
+    position: relative;
+}
+
+.slide {
+    background-color: #D4AF37;
+    display: none;
+    padding: 1.5rem;
+    text-align: justify;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.slide h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+
+}
+
+.slide h3 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.slide p {
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+}
+
+.slide.ativo {
     display: block;
 }
 
-.desativado {
-    display: none;
+.btn-carrossel {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cor-link, #c1a957);
+    /* opcional */
+    transition: color 0.3s;
 }
 
-.sinaldacruz {
-    text-align: center;
+.btn-carrossel:hover {
+    color: var(--cor-link-hover, #e6c97a);
 }
+
+
 
 .home {
     position: absolute;
