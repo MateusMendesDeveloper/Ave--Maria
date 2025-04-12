@@ -6,6 +6,7 @@ main {
     justify-content: center;
 }
 
+
 .carrossel {
     display: flex;
     align-items: center;
@@ -26,6 +27,7 @@ main {
     text-align: justify;
     border-radius: 10px;
     max-width: 800px;
+    min-height: 250px;
 }
 
 .slide h2 {
@@ -52,21 +54,63 @@ main {
     display: block;
 }
 
+
+.contador {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bolinha {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.bolinha.marcada {
+    background-color: #4b2e05;
+}
+
+.bolinha.selecionada {
+    border: 2px solid #000;
+}
+
+.bolinha:hover {
+    border: 2px solid #000;
+}
+
+
 .btn-carrossel {
     background-color: transparent;
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--cor-link, #c1a957);
-    /* opcional */
+    color: #c1a957;
     transition: color 0.3s;
 }
 
-.btn-carrossel:hover {
-    color: var(--cor-link-hover, #e6c97a);
+.btn-carrossel:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
+.btn-carrossel:hover {
+    color: #e6c97a;
+}
 
+.img-misterio {
+    max-width: 800px;
+    padding-top: 20px;
+}
+
+.img-misterio img {
+    width: 100%;
+    border-radius: 20px;
+}
 
 .home {
     position: absolute;
