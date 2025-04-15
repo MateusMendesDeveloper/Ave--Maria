@@ -4,6 +4,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
 
@@ -21,7 +22,7 @@ main {
 }
 
 .slide {
-    background-color: #D4AF37;
+    background-color: #EBD8A4;
     display: none;
     padding: 1.5rem;
     text-align: justify;
@@ -37,6 +38,12 @@ main {
 
 }
 
+.slide .linha {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
 .slide h3 {
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -45,7 +52,7 @@ main {
 }
 
 .slide p {
-    margin-top: 1rem;
+    margin: 0.8rem;
     font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
 }
@@ -59,28 +66,39 @@ main {
     display: flex;
     gap: 8px;
     justify-content: center;
-    margin-top: 1rem;
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.500);
+    border-radius: 20px;
+}
+
+.trindade-ctd {
+    background-color: none;
+    margin-top: 2rem;
 }
 
 .bolinha {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-image: url('../imgs/rosa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
     cursor: pointer;
-    transition: background-color 0.3s, border 0.3s;
+    border: none;
 }
 
 .bolinha.marcada {
-    background-color: #4b2e05;
+    opacity: 1;
 }
 
 .bolinha.selecionada {
-    border: 2px solid #000;
-}
-
-.bolinha:hover {
-    border: 2px solid #000;
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 
@@ -89,7 +107,7 @@ main {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #c1a957;
+    color: #EBD8A4;
     transition: color 0.3s;
 }
 
@@ -99,12 +117,14 @@ main {
 }
 
 .btn-carrossel:hover {
-    color: #e6c97a;
+    color: #D4AF37;
 }
 
 .img-misterio {
     max-width: 800px;
-    padding-top: 20px;
+    height: 400px;
+    padding-top: 0.8rem;
+    margin-bottom: 10px;
 }
 
 .img-misterio img {
@@ -112,7 +132,7 @@ main {
     border-radius: 20px;
 }
 
-.home {
+.inicio {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -120,11 +140,11 @@ main {
     font-size: 1.2em;
 }
 
-.home a {
+.inicio a {
     text-decoration: none;
     color: #EBD8A4;
 }
 
-.home a:hover {
+.inicio a:hover {
     color: #D4AF37;
 }

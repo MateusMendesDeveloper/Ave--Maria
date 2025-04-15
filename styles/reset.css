@@ -9,6 +9,7 @@ body {
     background-size: cover;
     position: relative;
     color: white;
+    overflow: hidden;
 }
 
 body::before {
