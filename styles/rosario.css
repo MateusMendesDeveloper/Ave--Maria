@@ -34,8 +34,8 @@ main {
 .slide h2 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-
+    font-size: 1.7rem;
+    color: #333;
 }
 
 .slide .linha {
@@ -55,6 +55,7 @@ main {
     margin: 0.8rem;
     font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
+    color: #666;
 }
 
 .slide.ativo {
@@ -147,4 +148,67 @@ main {
 
 .inicio a:hover {
     color: #D4AF37;
+}
+
+@media (max-width: 768px) {
+    .inicio {
+        left: 50%;
+        bottom: 3rem;
+        transform: translate(-50%);
+    }
+
+    .carrossel {
+        top: 20px;
+        gap: 1rem;
+    }
+
+    .slide {
+        padding: 0.8rem;
+        width: 100vw;
+    }
+
+    .slide h2 {
+        font-size: 1.2rem;
+        margin-block: 5px;
+    }
+
+    .slide .linha {
+        height: 2px;
+        background-color: #333;
+        margin-block: 10px;
+    }
+
+    .slide h3 {
+        font-size: 0.8rem;
+    }
+
+    .slide p {
+        margin: 1rem auto;
+        font-size: 0.9rem;
+    }
+
+    .contador {
+        top: -10px;
+        margin: 0 auto;
+        gap: 2px;
+        width: auto;
+    }
+
+    .btn-carrossel {
+        font-size: 1.8rem;
+        position: absolute;
+        bottom: 3rem;
+    }
+
+    #anterior {
+        left: 10%;
+    }
+    #proximo {
+        right: 10%;
+    }
+
+    .img-misterio {
+        height: auto;
+        margin-bottom: 15px;
+    }
 }
