@@ -22,26 +22,33 @@ main {
 }
 
 .slide {
-    background-color: #EBD8A4;
+    background: #fef6dc;
+    color: #2e2e2e;
     display: none;
-    padding: 1.5rem;
+    padding: 1.7rem;
     text-align: justify;
-    border-radius: 10px;
+    border-radius: 12px;
     max-width: 800px;
     min-height: 250px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    
 }
 
 .slide h2 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.7rem;
-    color: #333;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #3c2f2f;
 }
 
-.slide .linha {
-    width: 100%;
-    height: 2px;
-    background-color: white;
+.linha {
+    width: 60px;
+    height: 3px;
+    background-color: #b2945e;
+    margin: 1rem auto;
+    border-radius: 2px;
 }
 
 .slide h3 {
@@ -54,8 +61,10 @@ main {
 .slide p {
     margin: 0.8rem;
     font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    padding: 0 1rem;
 }
 
 .slide.ativo {
@@ -76,7 +85,7 @@ main {
 }
 
 .trindade-ctd {
-    background-color: none;
+    background-color: transparent;
     margin-top: 2rem;
 }
 
@@ -135,8 +144,8 @@ main {
 
 .inicio {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 30px;
+    left: 40px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
 }
@@ -153,7 +162,7 @@ main {
 @media (max-width: 768px) {
     .inicio {
         left: 50%;
-        bottom: 3rem;
+        bottom: 4.5rem;
         transform: translate(-50%);
     }
 
@@ -163,19 +172,19 @@ main {
     }
 
     .slide {
-        padding: 0.8rem;
+        padding: 1rem;
+        border-radius: 0px;
         width: 100vw;
     }
 
     .slide h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         margin-block: 5px;
     }
 
     .slide .linha {
         height: 2px;
-        background-color: #333;
-        margin-block: 10px;
+        width: 40px;
     }
 
     .slide h3 {
@@ -184,25 +193,27 @@ main {
 
     .slide p {
         margin: 1rem auto;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .contador {
-        top: -10px;
+        top: -5px;
         margin: 0 auto;
         gap: 2px;
         width: auto;
+        background-color: transparent;
     }
 
     .btn-carrossel {
         font-size: 1.8rem;
         position: absolute;
-        bottom: 3rem;
+        bottom: 4.5rem;
     }
 
     #anterior {
         left: 10%;
     }
+
     #proximo {
         right: 10%;
     }
