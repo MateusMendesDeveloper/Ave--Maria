@@ -1,0 +1,99 @@
+.hidden {
+    display: none;
+}
+
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    font-family: "Inter", sans-serif;
+}
+
+.tutorial-content {
+    border: 2px solid #EBD8A4;
+    background: black;
+    color: #EBD8A4;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+}
+
+.tutorial-slide {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial-slide img {
+    margin-top: 1rem;
+    display: inline;
+    width: 2.5rem;
+    height: auto;
+}
+
+.tutorial-slide .setas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+    margin-block: 1rem;
+}
+
+.tutorial-slide h2 {
+    margin-block: 1rem;
+}
+
+.tutorial-slide p {
+    text-align: justify;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #EBD8A4;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-buttons button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid #EBD8A4;
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    font-family: "Inter", sans-serif;
+}
+
+.nav-buttons button:hover {
+    background: #444;
+}

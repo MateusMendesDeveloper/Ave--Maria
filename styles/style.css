@@ -12,6 +12,7 @@ main {
     align-items: center;
     justify-content: space-evenly;
     height: 500px;
+    text-align: center;
 }
 
 .titulo {
@@ -25,9 +26,14 @@ main {
 .links {
     display: flex;
     justify-content: center;
-    background: rgb(0, 0, 0);
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 1) 5%, rgba(8, 8, 8, 0.30015756302521013) 50%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(
+        ellipse,
+        rgba(0, 0, 0, 1) 5%,
+        rgba(8, 8, 8, 0.3) 50%,
+        rgba(0, 0, 0, 0) 70%
+    );
     padding: 20px;
+    text-align: center;
 }
 
 .links a {
@@ -35,7 +41,7 @@ main {
     color: #EBD8A4;
     font-family: "Playfair Display SC", serif;
     text-decoration: none;
-    transition: 0.5s;
+    transition: color 0.3s ease;
 }
 
 .links a:hover {
@@ -45,12 +51,13 @@ main {
 .data {
     text-align: center;
     font-family: "Inter", sans-serif;
+    font-size: 1rem;
 }
 
 #misterio-dia {
     color: #EBD8A4;
-    text-decoration: none;
-    transition: 0.5s;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 #misterio-dia:hover {
@@ -65,6 +72,7 @@ main {
 
 .logo img {
     width: 60px;
+    height: auto;
 }
 
 .contatos {
@@ -77,14 +85,38 @@ main {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .contatos ul li a {
     color: #EBD8A4;
     font-size: 2rem;
-    transition: 0.5s;
+    transition: color 0.3s ease;
 }
 
 .contatos ul li a:hover {
     color: #D4AF37;
+}
+
+.btn-tutorial {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: #EBD8A4;
+    color: #000;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-tutorial:hover {
+    background-color: #d4af37;
+    color: #000;
 }

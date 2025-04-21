@@ -18,6 +18,7 @@
     <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/tutorial.css" />
 
     <title>Avemariar</title>
 </head>
@@ -26,12 +27,74 @@
 
     <div id="preload">
         <img src="./imgs/icone.png" alt="Logo" class="logo-preload" />
-        <div class="progress-bar">
+        <div class="preload">
             <div class="progress-fill"></div>
         </div>
     </div>
 
-    <main>
+    <div id="tutorial" class="tutorial-overlay hidden">
+        <div class="tutorial-content">
+            <div class="tutorial-slide">
+                <h1 class="titulo">Avemariar</h1>
+                <h2>Bem-vindo!</h2>
+                <p><strong>Estamos felizes em ter você aqui!</strong>
+                    Este site foi criado para te auxiliar na oração do Rosário e/ou do Terço diário.
+                    Estamos em constante desenvolvimento e contamos com a sua ajuda para torná-lo cada vez melhor.
+                    Se tiver alguma sugestão ou ideia, entre em contato conosco por meio dos links no canto inferior
+                    direito.
+                </p>
+            </div>
+
+            <div class="tutorial-slide hidden">
+                <h1 class="titulo">Avemariar</h1>
+                <h2>Rezar Rosário/Terço</h2>
+                <p>Para rezar o Rosário, clique no botão central escrito <strong>Rezar Rosário</strong>. Para rezar o
+                    Terço diário, clique no botão abaixo da data, nomeado <strong>Mistérios</strong>, correspondente ao
+                    Mistério do dia.</p>
+            </div>
+
+            <div class="tutorial-slide hidden">
+                <h1 class="titulo">Avemariar</h1>
+                <h2>Rezando</h2>
+                <p>Ao começar a rezar, use o botão <strong><i class="fa-solid fa-chevron-right"></i></strong> para
+                    avançar em cada parte do Terço. Se necessário,
+                    utilize o botão <strong><i class="fa-solid fa-chevron-left"></i></strong> para voltar a alguma
+                    parte específica.</p>
+                <div class="setas"><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="tutorial-slide hidden">
+                <h1 class="titulo">Avemariar</h1>
+                <h2>Mistérios</h2>
+                <p>Ao chegar aos Mistérios, você deverá rezar o Pai-Nosso e as Ave-Marias para passar ao próximo
+                    Mistério. Para isso, marque as rosas e o botão <strong><i
+                            class="fa-solid fa-chevron-right"></i></strong> será liberado.</p>
+                <img src="./imgs/rosa.png" alt="Rosa ilustrativa" />
+            </div>
+
+            <div class="tutorial-slide hidden">
+                <h1 class="titulo">Avemariar</h1>
+                <h2>Meditação</h2>
+                <p>O Rosário é mais do que apenas rezar dezenas de Ave-Marias — é um momento de meditação, no qual
+                    contemplamos os Mistérios de Nosso Senhor Jesus Cristo. Ao fazer isso, aproximamo-nos mais d’Ele e
+                    de Sua Mãe, Maria Santíssima.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div class="nav-buttons">
+                <button onclick="previousSlide()" aria-label="Anterior"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="skipTutorial()">Pular</button>
+                <button onclick="nextSlide()" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <main id="conteudo-principal">
         <div class="principal">
             <h1 class="titulo">Avemariar</h1>
             <div class="links">
@@ -40,7 +103,6 @@
 
             <section class="data">
                 <p id="data-completa"></p>
-                <p></p>
                 <a id="misterio-dia"></a>
             </section>
         </div>
@@ -51,18 +113,19 @@
 
         <div class="contatos">
             <ul>
-                <li><a href="https://github.com/MateusMendesDeveloper" target="_blank"><i
+                <li><a href="https://github.com/MateusMendesDeveloper" target="_blank" aria-label="GitHub"><i
                             class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/mendes.codes/" target="_blank"><i
+                <li><a href="https://www.instagram.com/mendes.codes/" target="_blank" aria-label="Instagram"><i
                             class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/mateus-mendes-de-siqueira-4aa386340/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mateus-mendes-de-siqueira-4aa386340/" target="_blank"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
         </div>
+
+        <button onclick="mostrarTutorial()" class="btn-tutorial">Como Rezar</button>
     </main>
 
-    <script src="./scripts/preload.js"></script>
-
+    <script src="./scripts/tutorial.js"></script>
     <script>
         const hoje = new Date();
 

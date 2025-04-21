@@ -22,6 +22,7 @@ main {
 }
 
 .slide {
+    min-height: 250px;
     background: #fef6dc;
     color: #2e2e2e;
     display: none;
@@ -29,9 +30,7 @@ main {
     text-align: justify;
     border-radius: 12px;
     max-width: 800px;
-    min-height: 250px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    
 }
 
 .slide h2 {
@@ -71,6 +70,27 @@ main {
     display: block;
 }
 
+.img-oracao {
+    max-width: 800px;
+    height: 450px;
+}
+
+.img-oracao img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.img-misterio {
+    max-width: 800px;
+    height: 400px;
+    padding-top: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.img-misterio img {
+    width: 100%;
+    border-radius: 20px;
+}
 
 .contador {
     display: flex;
@@ -111,7 +131,6 @@ main {
     opacity: 1;
 }
 
-
 .btn-carrossel {
     background-color: transparent;
     border: none;
@@ -128,18 +147,6 @@ main {
 
 .btn-carrossel:hover {
     color: #D4AF37;
-}
-
-.img-misterio {
-    max-width: 800px;
-    height: 400px;
-    padding-top: 0.8rem;
-    margin-bottom: 10px;
-}
-
-.img-misterio img {
-    width: 100%;
-    border-radius: 20px;
 }
 
 .inicio {
@@ -167,7 +174,6 @@ main {
     }
 
     .carrossel {
-        top: 20px;
         gap: 1rem;
     }
 
