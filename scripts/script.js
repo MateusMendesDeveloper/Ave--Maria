@@ -69,4 +69,3 @@ btnProximo.addEventListener('click', () => {
 
 adicionarEventosBolinhas();
 atualizarSlide();
-
