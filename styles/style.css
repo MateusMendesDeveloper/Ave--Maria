@@ -1,5 +1,5 @@
 main {
-    height: 100vh;
+    height: 100dvh;
     max-height: 100%;
     width: 100%;
     display: flex;
@@ -28,12 +28,10 @@ main {
 .links {
     display: flex;
     justify-content: center;
-    background: radial-gradient(
-        ellipse,
-        rgba(0, 0, 0, 1) 5%,
-        rgba(8, 8, 8, 0.3) 50%,
-        rgba(0, 0, 0, 0) 70%
-    );
+    background: radial-gradient(ellipse,
+            rgba(0, 0, 0, 1) 5%,
+            rgba(8, 8, 8, 0.3) 50%,
+            rgba(0, 0, 0, 0) 70%);
     padding: 20px;
     text-align: center;
 }
@@ -121,4 +119,60 @@ main {
 .btn-tutorial:hover {
     background-color: #d4af37;
     color: #000;
+}
+
+
+@media (max-width: 374px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .links a {
+        font-size: 4rem;
+    }
+
+    .data {
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .btn-tutorial {
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .links a {
+        font-size: 4.5rem;
+    }
+
+    .data {
+        font-size: 1rem;
+    }
+
+    .logo {
+        bottom: 4.5rem;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .contatos {
+        bottom: 4.5rem;
+    }
+
+    .btn-tutorial {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        bottom: 7.5rem;
+    }
 }
